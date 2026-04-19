@@ -300,7 +300,7 @@ export default function App() {
                 <Button variant="default" asChild>
                   <a href="mailto:jennytronconi02@gmail.com">
                     <Mail className="w-4 h-4 mr-2" />
-                    Contact me
+                    Contact Me
                   </a>
                 </Button>
                 <Button variant="outline" asChild>
