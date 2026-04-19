@@ -300,7 +300,7 @@ export default function App() {
                 <Button variant="default" asChild>
                   <a href="mailto:jennytronconi02@gmail.com">
                     <Mail className="w-4 h-4 mr-2" />
-                    Contacts
+                    Contact me
                   </a>
                 </Button>
                 <Button variant="outline" asChild>
@@ -427,7 +427,7 @@ export default function App() {
       {/* Footer */}
       <footer className="bg-secondary/50 py-12">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-muted-foreground mb-4">Contact me</p>
+          <p className="text-muted-foreground mb-4">Contacts</p>
           <div className="flex justify-center gap-4">
             <Button variant="outline" asChild>
               <a href="mailto:jennytronconi02@gmail.com">
