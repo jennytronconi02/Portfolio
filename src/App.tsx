@@ -50,7 +50,25 @@ const projects = {
       description: "Myoelectric control system for prosthetic devices using kNN classification and electrode shift robustness analysis.",
       category: "Rehabilitation Engineering",
     }
-  ]
+  ],
+  "prosthetics": [
+    {
+      id: "tibial-prosthesis",
+      title: "Tibial Prosthesis Design and FEM Analysis",
+      image: "tibia_prosthesis.jpg",
+      description: "From medical imaging to FEM simulation: tibial bone mesh reconstruction and prosthesis positioning with stress/deformation analysis.",
+      category: "Prosthetic Design",
+    }
+  ],
+  "ai-medicine": [
+    {
+      id: "ai-medicine",
+      title: "Artificial Intelligence in Medicine",
+      image: "ai_medicine.jpg",
+      description: "Review of AI applications in healthcare: machine learning, deep learning, clinical decision support systems and personalized medicine.",
+      category: "AI in Medicine",
+    }
+  ],
 };
 
 const allProjects = Object.values(projects).flat();
@@ -132,6 +150,57 @@ const projectDetails = {
     ],
     githubUrl: "",
     externalUrl: "https://docs.google.com/document/d/1A_rj1qM9lN3etFMNUK5VE0P4Qk3NPb1b/edit?usp=share_link&ouid=116390599301931860711&rtpof=true&sd=true",
+  },
+  "tibial-prosthesis": {
+    title: "Tibial Prosthesis Design and Finite Element Analysis",
+    category: "Prosthetic Design",
+    duration: "Academic Project — A.Y. 2024/2025",
+    technologies: [
+      "RETOMO",
+      "ANSA",
+      "META",
+      "FEM Analysis",
+      "CT Medical Imaging",
+      "3D Mesh Generation",
+      "Material Mapping",
+      "Nastran Solver",
+    ],
+    overview:
+      "This project covered the full computational pipeline for the design and structural evaluation of a tibial prosthetic implant. Starting from CT medical images processed in RETOMO, a 3D surface mesh of the tibial bone was reconstructed and refined. The geometry was then imported into ANSA, where a titanium prosthetic stem was scaled, positioned on the resected tibial plateau, and meshed with a high-quality 3D tetrahedral mesh.",
+    challenges:
+      "A critical challenge was ensuring the anatomical accuracy and mesh quality of the bone geometry throughout the processing pipeline — from raw CT segmentation in RETOMO to surface simplification and resection in ANSA. Correctly defining the contact conditions between the prosthesis and the tibial bone, as well as applying a physiologically realistic oblique load (500 N at 30° on the XZ plane), required careful setup. Achieving a valid volumetric mesh while managing computational cost also demanded iterative refinement of meshing parameters.",
+    results:
+      "The FEM simulation, solved using the Nastran linear static solver, revealed the full displacement and stress distribution across the bone-implant system. Maximum displacements were observed at the proximal end of the prosthesis, consistent with the cantilever-like behaviour of a stem fixed at its base. Von Mises stress concentrations were localized at the load application point and at the 10 constraint nodes at the base, confirming the implant's role in absorbing and redistributing the load. Normal stresses along all three axes and shear stresses were also evaluated, validating the mechanical coherence of the model.",
+    images: [
+      "tibia_mesh3d.jpeg",
+      "tibia_results.jpeg",
+    ],
+    githubUrl: "",
+    externalUrl: "",
+  },
+  "ai-medicine": {
+    title: "Artificial Intelligence in Medicine",
+    category: "AI in Medicine",
+    duration: "Academic Project — A.Y. 2024/2025",
+    technologies: [
+      "Machine Learning",
+      "Deep Learning",
+      "Clinical Decision Support",
+      "Biomedical Informatics",
+      "Personalized Medicine",
+      "Neural Networks",
+    ],
+    overview:
+      "This project focused on the development and validation of advanced machine learning models for clinical decision support in medicine. The workflow integrated comprehensive data preprocessing—including cleaning, missing value imputation, and comorbidity encoding—with robust feature selection using Genetic Algorithms (GA). We implemented and compared three distinct classification architectures: k-Nearest Neighbors (kNN), Multi-Layer Perceptron (MLP), and Bayesian classifiers. To optimize training, the dataset was partitioned into construction and test sets using diverse clustering techniques, including hierarchical dendrograms and Self-Organizing Maps (SOM), ensuring a statistically sound evaluation of the models.",
+    challenges:
+      "The primary technical challenge lay in managing the complexity of medical data and preventing model overfitting, particularly with the Multi-Layer Perceptron (MLP). Identifying the most relevant clinical variables from a high-dimensional dataset required a precise feature selection strategy. Additionally, we faced the difficulty of balancing model sensitivity and specificity; while complex architectures like the MLP showed exceptional learning capabilities during the training phase, achieving high generalization performance on the external Test Set proved challenging due to the inherent noise and non-linear patterns within the patient data.",
+    results:
+      "The experimental results demonstrated that the Multi-Layer Perceptron (MLP) achieved the highest peak performance, with training accuracies reaching between 85% and 94%. However, the kNN and Bayesian classifiers exhibited more stable generalization across validation and test sets, with accuracies typically ranging from 60% to 70%. Performance was rigorously quantified through confusion matrices, specifically tracking specificity and sensitivity to ensure clinical reliability. Ultimately, the integration of Genetic Algorithms for feature selection and SOM-based dataset partitioning significantly enhanced the models' ability to categorize complex medical patterns compared to standard random division methods.",
+    images: [
+      "ai_medicine.jpg",
+    ],
+    githubUrl: "",
+    externalUrl: "",
   },
 };
 
@@ -293,7 +362,8 @@ export default function App() {
               </div>
 
               <p className="text-muted-foreground max-w-2xl text-lg">
-                Biomedical Engineering Master’s student at Politecnico di Torino. Passionate about innovating in prosthetic design and medical data analysis to bridge the gap between advanced technology and clinical rehabilitation.
+                Biomedical Engineering Master's student at Politecnico di Torino.<br />
+                Passionate about innovating in prosthetic design and medical data analysis to bridge the gap between advanced technology and clinical rehabilitation.
               </p>
 
               <div className="flex flex-wrap gap-3">
