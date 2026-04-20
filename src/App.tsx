@@ -29,7 +29,7 @@ const projects = {
       id: "retinal-segmentation",
       title: "Automatic Segmentation of Retinal Vessels",
       image: "mip_retina.png",
-      description: "Deep Learning pipeline (U-Net) for clinical retinal vessel segmentation.",
+      description: "End-to-end deep learning pipeline (U-Net) for automatic retinal vessel segmentation.",
       category: "Medical Image Processing",
     }
   ],
@@ -38,7 +38,7 @@ const projects = {
       id: "parkinson-signal-analysis",
       title: "Analysis of Electrophysiological Signals (MER)",
       image: "parkinson_waveforms.png",
-      description: "Surgical Parkinson's treatment through STN localization and signal processing.",
+      description: "Quantitative characterization of MER recordings along the STN trajectory in Parkinson's patients undergoing DBS surgery.",
       category: "Neuroengineering",
     }
   ],
@@ -47,7 +47,7 @@ const projects = {
       id: "semg-classification",
       title: "sEMG-Based Hand Movement Classification",
       image: "riab_prosthetic.jpg",
-      description: "Myoelectric control system for prosthetic devices using kNN classification and electrode shift robustness analysis.",
+      description: "Myoelectric classification system for 12 hand/wrist movements using kNN and temporal features from high-density sEMG.",
       category: "Rehabilitation Engineering",
     }
   ],
@@ -56,7 +56,7 @@ const projects = {
       id: "tibial-prosthesis",
       title: "Tibial Prosthesis Design and FEM Analysis",
       image: "tibia_prosthesis.jpg",
-      description: "From medical imaging to FEM simulation: tibial bone mesh reconstruction and prosthesis positioning with stress/deformation analysis.",
+      description: "Full computational pipeline from CT imaging to 3D mesh reconstruction, prosthesis positioning and finite element analysis.",
       category: "Prosthetic Design",
     }
   ],
@@ -65,7 +65,7 @@ const projects = {
       id: "ai-medicine",
       title: "Artificial Intelligence in Medicine",
       image: "ai_medicine.jpg",
-      description: "Review of AI applications in healthcare: machine learning, deep learning, clinical decision support systems and personalized medicine.",
+      description: "Development and comparison of ML models (kNN, MLP, Bayesian) for clinical decision support.",
       category: "AI in Medicine",
     }
   ],
@@ -222,7 +222,7 @@ const ProjectCard = ({ project, onClick }) => (
         {project.category}
       </Badge>
       <h4 className="mb-2 line-clamp-2">{project.title}</h4>
-      <p className="text-muted-foreground text-sm line-clamp-2">
+      <p className="text-muted-foreground text-sm line-clamp-3">
         {project.description}
       </p>
     </div>
