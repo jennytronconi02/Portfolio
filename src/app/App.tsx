@@ -398,8 +398,7 @@ export default function App() {
                 <img
                   src="foto_profilo.JPG"
                   alt="Jenny Tronconi"
-                  className="w-full h-full object-cover object-centre"
-                  style={{ objectFit: 'cover', objectPosition: '45% 25%' }}
+                  className="w-full h-full object-cover object-[45%_25%]"
                 />
               </div>
             </div>
