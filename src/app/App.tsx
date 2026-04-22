@@ -396,9 +396,10 @@ export default function App() {
             <div className="flex justify-center lg:justify-end">
               <div className="w-64 h-64 rounded-lg overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 shadow-lg">
                 <img
-                  src="/imports/905AAE68-564F-4B38-B64E-DAC6896CFA0A.jpg"
+                  src="foto_profilo.JPG"
                   alt="Jenny Tronconi"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-centre"
+                  style={{ objectFit: 'cover', objectPosition: '45% 25%' }}
                 />
               </div>
             </div>
