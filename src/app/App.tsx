@@ -117,7 +117,7 @@ const projectDetails = {
     overview:
       "This study provides a systematic quantitative characterization of electrophysiological activity along the stereotactic trajectory, utilizing MicroElectrode Recordings (MERs) from 36 Parkinson’s Disease patients undergoing bilateral DBS surgery. The recordings, captured at multiple depths relative to the SubThalamic Nucleus (STN), were categorized as IN-STN or OUT-STN to facilitate precise anatomical mapping. To ensure signal integrity, a standardized processing pipeline was implemented, featuring robust artifact removal, bandpass filtering (200 Hz–5 kHz), and a dynamic spike detection method based on the Median Absolute Deviation (MAD).",
     challenges:
-      "To address the challenges of noisy intraoperative recordings, a robust signal processing pipeline was developed with a focus on temporal continuity and noise reduction. Following variance-based artifact rejection, the system implemented a spike detection strategy using a 3σ threshold and a 1.5 ms refractory period to ensure reliable event identification. The resulting dataset was then characterized through a dual-feature extraction approach: spike-based metrics (including firing rate and burst percentage) were combined with spectral analysis across three high-frequency bands (200 Hz−5 kHz), providing a multi-dimensional view of the neural activity.",
+      "To address the challenges of noisy intraoperative recordings, a robust signal processing pipeline was developed with a focus on temporal continuity and noise reduction. Following variance-based artifact rejection, the system implemented a spike detection strategy using a 3σ threshold and a 1.5 ms refractory period to ensure reliable event identification. The resulting dataset was then characterized through a dual-feature extraction approach: spike-based metrics (including firing rate and burst percentage) were combined with spectral analysis across three high-frequency bands (200 Hz−5 kHz), providing a multi-dimensional view of the neural activity.",
     results:
       "Electrophysiological mapping identified IN-STN regions by their significantly higher firing rates and structured burst activity. A key finding of the study was the strong correlation between these signal features and clinical progression: as disease duration increased, firing rates and burst percentages showed a significant decline, while ISI-related metrics increased (p<0.01). These results suggest that the neurodegenerative process doesn't just affect the patient's symptoms, but leads to measurable, progressive alterations in the STN’s firing mechanisms, providing valuable quantitative markers for characterizing the state of the disease.",
     images: [
@@ -396,7 +396,7 @@ export default function App() {
             <div className="flex justify-center lg:justify-end">
               <div className="w-64 h-64 rounded-lg overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 shadow-lg">
                 <img
-                  src="foto_profilo.jpg"
+                  src="/imports/905AAE68-564F-4B38-B64E-DAC6896CFA0A.jpg"
                   alt="Jenny Tronconi"
                   className="w-full h-full object-cover"
                 />
